@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        @font-face {
+            font-family: 'icomoon';
+            src: url('../../../../assets/fonts/icomoon.eot?9c4za7');
+            src: url('../../../../assets/fonts/icomoon.eot?9c4za7#iefix') format('embedded-opentype'),
+                url('../../../../assets/fonts/icomoon.ttf?9c4za7') format('truetype'),
+                url('../../../../ssets/fonts/icomoon.woff?9c4za7') format('woff'),
+                url('../../../../assets/fonts/icomoon.svg?9c4za7#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+        #userList_father{
+            width: 80%;
+            height: 500px;
+            background: rgba(0, 0, 0, 0.3);
+            float: right;
+        }
+        
+        .list_songs::-webkit-scrollbar {
+            width: 10px;     
+            height: 4px;
+            scrollbar-arrow-color:red;
+
+        }
+        .list_songs::-webkit-scrollbar-thumb {
+           
+            border-radius: 5px;
+            background: rgba(0,0,0,0.04);
+            scrollbar-arrow-color:red;
+        }
+        .list_songs::-webkit-scrollbar-track {
+            background: none;
+            border-radius: 0;
+        }
+        .list_info{
+            width: 100%;
+            height: 200px;
+            /* background: sandybrown; */
+        }
+        .list_info>img{
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin-left: 50px;
+            float: left;
+            border-radius: 10px;
+        }
+        .list_info>.list_info_text{
+            height: 200px;
+            float: left;
+            margin-left: 50px;
+        }
+        .list_info_btn{
+            margin-top: 50px;
+        }
+        .list_btn{
+            margin-top: 20px;
+        }
+        .list_btn_songs{
+            border: rgba(0, 0, 0, 0.6);
+            padding:5px 10px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin-left: 50px;
+        }
+        .list_songs{
+            width: 95%;
+            height: 350px;
+            margin: 0 auto;
+            /* background-color: salmon; */
+            overflow-y: auto;
+        }
+        .list_songs>ul>li>div>button{
+            /* display: inline-block; */
+            font-family: 'icomoon';
+            background: none;
+            border: none;
+            font-size: 15px;
+            padding: 10px 0;
+            margin-left: 10px;
+            float: left;
+        }
+        .songName{
+            width: 40%;
+            height: 100%;
+            float: left;
+        }
+        .singerName{
+            width: 30%;
+            height: 100%;
+            float: left;
+        }
+        .specialName{
+            width: 30%;
+            height: 100%;
+            float: left;
+        }
+        .songName_btn{
+            float:right;
+            padding-right: 10px;
+        }
+        .songName_btn>button{
+            float: right;
+            font-family: 'icomoon';
+            font-size: 20px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            margin-top: 12px;
+            margin-right: 15px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+        .list_info_btn>button{
+            background-color: rgba(0, 0, 0, 0.1);
+            border:none;
+            padding:5px 10px;
+            border-radius: 2.5px;
+        }
+        .list_info_btn>button:hover{
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="userList_father">
+        <div class="list_info">
+            <img src="../../../../assets/img/main/cyx.png" alt="">
+
+            <div class="list_info_text">
+                <p><h1>陈奕迅的歌单</h1></p>
+                <p>
+                    <img src="../../../../assets/img/top/user.png" alt="">
+                     ldh
+                </p>
+                <p>这是我非常喜欢的华语歌手陈奕迅</p>
+                <p class="list_info_btn">
+                    <button>全部播放</button>
+                    <button>下载</button>
+                    <button>批量操作</button>
+                    <button>分享</button>
+                </p>
+            </div>
+        </div>
+        <div class="list_btn">
+            <button class="list_btn_songs">歌曲{{ListSongSun}}</button>
+        </div>
+        <div class="list_songs">
+            <ul>
+                <li>
+                    <div class="songName">
+                        歌曲
+                    </div>
+                    <div class="singerName">歌手</div>
+                    <div class="specialName">专辑</div>
+                </li>
+                <li>
+                    <div class="songName">
+                        <button style="font-size: 25px;"></button>
+                        <button>{{songName}}</button>
+                        <div class="songName_btn">
+                            <button></button>
+                            <button></button>
+                            <button></button>
+                        </div>
+                    </div>
+                    <div class="singerName"><button>{{singerName}}</button></div>
+                    <div class="specialName"><button>{{specialName}}</button></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
